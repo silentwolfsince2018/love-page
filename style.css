@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden;
+  font-family: Arial;
+  color: white;
+}
+
+/* 🌞 CENTER IMAGE */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-shadow: 0 0 60px pink;
+}
+
+/* 💖 SIDE MENUS */
+.side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 2;
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 20px;
+}
+
+/* 📦 CARDS */
+.card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 10px pink;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px pink;
+}
+
+/* 💌 CONTENT BOX (IMPROVED) */
+.content {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: pink;
+  background: rgba(255, 192, 203, 0.08);
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: 1px solid pink;
+  backdrop-filter: blur(10px);
+  min-width: 250px;
+}
+
+/* 💖 ORBIT TEXT */
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  text-shadow: 0 0 20px pink;
+  animation: orbit linear infinite;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(240px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(240px) rotate(-360deg);
+  }
+}
+
+/* 💓 HEARTS */
+.heart {
+  position: absolute;
+  color: pink;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); opacity: 1; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* ✨ STARS */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from {opacity: 0.2;}
+  to {opacity: 1;}
+}
+
+/* 📸 FIX IMAGE SIZE (IMPROVED) */
+.content img {
+  width: 180px;
+  max-width: 70%;
+  border-radius: 15px;
+  margin-top: 10px;
+  box-shadow: 0 0 15px pink;
+}
+
+/* 🔙 BACK BUTTON */
+.back-btn {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: none;
+  background: pink;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: hotpink;
+  transform: scale(1.05);
+}
